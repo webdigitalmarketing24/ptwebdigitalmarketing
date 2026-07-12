@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT WEBDIGITAL MARKETING | Jasa Digital Marketing & Web Development</title>
-    <meta name="description" content="PT WEBDIGITAL MARKETING membantu bisnis Anda tumbuh secara online dengan layanan digital marketing, pembuatan website, SEO, dan periklanan.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -22,20 +22,18 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .fade-in { animation: fadeIn 1s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 antialiased transition-colors duration-300">
 
+    <!-- Header -->
     <header class="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100 dark:border-gray-800" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="#" class="text-2xl font-bold text-brand-700 dark:text-brand-500 tracking-tighter"><i class="fa-solid fa-chart-line mr-2"></i>WEBDIGITAL</a>
                 <nav class="hidden lg:flex space-x-6">
                     <a href="#home" class="hover:text-brand-600" data-i18n="nav_home">Beranda</a>
-                    <a href="#about" class="hover:text-brand-600" data-i18n="nav_about">Tentang</a>
+                    <a href="#profile" class="hover:text-brand-600" data-i18n="nav_profile">Profil</a>
                     <a href="#services" class="hover:text-brand-600" data-i18n="nav_services">Layanan</a>
                     <a href="#testimonials" class="hover:text-brand-600" data-i18n="nav_testi">Testimoni</a>
                     <a href="#contact" class="hover:text-brand-600" data-i18n="nav_contact">Kontak</a>
@@ -58,15 +56,70 @@
         <section id="home" class="py-20 text-center px-4">
             <h1 class="text-4xl lg:text-6xl font-bold mb-6"><span data-i18n="hero_title_1">Tingkatkan Kehadiran</span> <span class="text-brand-600" data-i18n="hero_title_2">Bisnis Anda</span></h1>
             <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10" data-i18n="hero_desc">Kami membantu merek tumbuh secara online dengan strategi cerdas, pembuatan website profesional, dan kampanye berdampak.</p>
-            <a href="#services" class="bg-brand-600 text-white px-8 py-4 rounded-full font-bold" data-i18n="hero_btn_1">Lihat Layanan Kami</a>
+            <a href="#services" class="bg-brand-600 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-700 transition" data-i18n="hero_btn_1">Lihat Layanan Kami</a>
         </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20 bg-white dark:bg-gray-800">
+        <!-- Profile Section -->
+        <section id="profile" class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-5xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12" data-i18n="prof_title">Profil Perusahaan</h2>
+                
+                <div class="space-y-6">
+                    <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-3xl border border-gray-100 dark:border-gray-600 shadow-sm">
+                        <h3 class="text-2xl font-bold text-brand-600 mb-4" data-i18n="prof_t_1">1. Tentang Perusahaan</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed" data-i18n="prof_d_1">PT WEB DIGITAL MARKETING ADALAH PERUSAHAAN YANG BERGERAK DI BIDANG TEKNOLOGI DIGITAL DAN PEMASARAN ONLINE YANG BERFOKUS PADA PENGEMBANGAN WEBSITE, STRATEGI PEMASARAN DIGITAL, SERTA SOLUSI BRANDING MODERN UNTUK MEMBANTU BISNIS BERKEMBANG DI ERA DIGITAL.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-3xl border border-gray-100 dark:border-gray-600">
+                            <h3 class="text-xl font-bold text-brand-600 mb-4" data-i18n="prof_t_2">2. Visi</h3>
+                            <p class="text-gray-600 dark:text-gray-300" data-i18n="prof_d_2">MENJADI PERUSAHAAN DIGITAL MARKETING TERPERCAYA DAN TERDEPAN DI INDONESIA DALAM MEMBERIKAN SOLUSI PEMASARAN BERBASIS TEKNOLOGI.</p>
+                        </div>
+                        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-3xl border border-gray-100 dark:border-gray-600">
+                            <h3 class="text-xl font-bold text-brand-600 mb-4" data-i18n="prof_t_3">3. Misi</h3>
+                            <ul class="text-gray-600 dark:text-gray-300 list-disc pl-5 space-y-1" data-i18n="prof_d_3">
+                                <li>Memberikan layanan digital marketing yang efektif dan terukur</li>
+                                <li>Membantu klien meningkatkan brand awareness dan penjualan</li>
+                                <li>Mengembangkan teknologi web yang modern dan responsif</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-16" data-i18n="serv_title">Layanan Utama Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Link 1 -->
+                    <a href="https://www.jasakelolamedsos.web.id/" target="_blank" class="block p-8 bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all hover:scale-105">
+                        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900 text-brand-600 rounded-2xl flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-share-nodes"></i></div>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="serv_1_t">Jasa Kelola Medsos</h3>
+                        <p class="text-gray-600 dark:text-gray-300" data-i18n="serv_1_d">Profesional management untuk platform media sosial bisnis Anda agar lebih menarik dan interaktif.</p>
+                    </a>
+                    <!-- Link 2 -->
+                    <a href="https://www.ceritakitapublisher.my.id/" target="_blank" class="block p-8 bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all hover:scale-105">
+                        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900 text-brand-600 rounded-2xl flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-book"></i></div>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="serv_2_t">Cerita Kita Publisher</h3>
+                        <p class="text-gray-600 dark:text-gray-300" data-i18n="serv_2_d">Layanan penerbitan buku profesional, baik manual maupun digital, untuk mendokumentasikan karya Anda.</p>
+                    </a>
+                    <!-- Link 3 -->
+                    <a href="https://www.mediadesaonlininfo.web.id/" target="_blank" class="block p-8 bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all hover:scale-105">
+                        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900 text-brand-600 rounded-2xl flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-globe"></i></div>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="serv_3_t">Media Desa Online</h3>
+                        <p class="text-gray-600 dark:text-gray-300" data-i18n="serv_3_d">Solusi platform digital modern untuk kebutuhan informasi dan sistem layanan desa secara online.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-16" data-i18n="testi_title">Apa Kata Klien Kami</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- 10 Testimonial Cards -->
                     <script>
                         const testimonials = [
                             {name: "Budi Santoso", role: "UMKM Lokal", text: "Pengerjaan website sangat cepat dan sangat profesional!"},
@@ -81,7 +134,7 @@
                             {name: "Event Organizer", role: "EO", text: "Rekomendasi terbaik untuk agensi digital di Yogyakarta."}
                         ];
                         document.write(testimonials.map(t => `
-                            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-2xl border border-gray-100 dark:border-gray-600">
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
                                 <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                                 <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"${t.text}"</p>
                                 <h4 class="font-bold text-gray-900 dark:text-white">${t.name}</h4>
@@ -94,14 +147,14 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20">
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
             <div class="max-w-4xl mx-auto px-4 bg-white dark:bg-gray-800 p-10 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h2 class="text-3xl font-bold mb-8" data-i18n="contact_title">Hubungi Kami</h2>
                 <div class="space-y-4 text-gray-600 dark:text-gray-300">
-                    <p><i class="fa-solid fa-location-dot mr-3 text-brand-600"></i> Jl. Kaliurang KM 10, Sleman, Yogyakarta</p>
+                    <p><i class="fa-solid fa-location-dot mr-3 text-brand-600"></i> Jl. Kaliurang KM 10 RT 03 RW 12, Gentan, Sinduharjo, Ngaglik, Sleman, Yogyakarta</p>
                     <p><i class="fa-brands fa-whatsapp mr-3 text-brand-600"></i> 08551236277</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-brand-600"></i> adminwebdigitalmarketing@gmail.com</p>
-                    <p><i class="fa-solid fa-link mr-3 text-brand-600"></i> <a href="https://ptwebdigitalmarketing.taplink.bio" class="text-brand-600 underline">ptwebdigitalmarketing.taplink.bio</a></p>
+                    <p><i class="fa-solid fa-link mr-3 text-brand-600"></i> <a href="https://ptwebdigitalmarketing.taplink.bio" target="_blank" class="text-brand-600 underline">ptwebdigitalmarketing.taplink.bio</a></p>
                 </div>
             </div>
         </section>
@@ -113,9 +166,42 @@
 
     <script>
         const translations = {
-            id: { nav_home: "Beranda", nav_about: "Tentang", nav_services: "Layanan", nav_testi: "Testimoni", nav_contact: "Kontak", nav_cta: "Mulai Sekarang", hero_title_1: "Tingkatkan Kehadiran", hero_title_2: "Bisnis Anda", hero_desc: "Kami membantu merek tumbuh secara online dengan strategi cerdas.", hero_btn_1: "Lihat Layanan Kami", testi_title: "Apa Kata Klien Kami", contact_title: "Hubungi Kami", footer_copy: "Hak Cipta Dilindungi." },
-            en: { nav_home: "Home", nav_about: "About", nav_services: "Services", nav_testi: "Testimonials", nav_contact: "Contact", nav_cta: "Get Started", hero_title_1: "Elevate Your", hero_title_2: "Business Presence", hero_desc: "We help brands grow online with smart strategies.", hero_btn_1: "View Services", testi_title: "What Clients Say", contact_title: "Contact Us", footer_copy: "All Rights Reserved." },
-            jv: { nav_home: "Beranda", nav_about: "Babagan", nav_services: "Layanan", nav_testi: "Testimoni", nav_contact: "Kontak", nav_cta: "Miwiti", hero_title_1: "Tingkataken Kawontenan", hero_title_2: "Bisnis Panjenengan", hero_desc: "Kula mbantu merek ngrembaka online mawi strategi pinter.", hero_btn_1: "Priksani Layanan", testi_title: "Pangandikan Klien", contact_title: "Hubungi Kula", footer_copy: "Hak Cipta Dipun Lindhungi." }
+            id: { 
+                nav_home: "Beranda", nav_profile: "Profil", nav_services: "Layanan", nav_testi: "Testimoni", nav_contact: "Kontak", nav_cta: "Mulai Sekarang", 
+                hero_title_1: "Tingkatkan Kehadiran", hero_title_2: "Bisnis Anda", hero_desc: "Kami membantu merek tumbuh secara online dengan strategi cerdas.", hero_btn_1: "Lihat Layanan Kami", 
+                prof_title: "Profil Perusahaan", prof_t_1: "1. Tentang Perusahaan", prof_d_1: "PT WEB DIGITAL MARKETING ADALAH PERUSAHAAN YANG BERGERAK DI BIDANG TEKNOLOGI DIGITAL DAN PEMASARAN ONLINE.",
+                prof_t_2: "2. Visi", prof_d_2: "Menjadi perusahaan digital marketing terpercaya dan terdepan di Indonesia.",
+                prof_t_3: "3. Misi", prof_d_3: "Memberikan layanan digital marketing efektif, membantu klien meningkatkan penjualan, dan mengembangkan teknologi web modern.",
+                serv_title: "Layanan Utama Kami",
+                serv_1_t: "Jasa Kelola Medsos", serv_1_d: "Profesional management untuk platform media sosial bisnis Anda agar lebih menarik dan interaktif.",
+                serv_2_t: "Cerita Kita Publisher", serv_2_d: "Layanan penerbitan buku profesional, baik manual maupun digital, untuk mendokumentasikan karya Anda.",
+                serv_3_t: "Media Desa Online", serv_3_d: "Solusi platform digital modern untuk kebutuhan informasi dan sistem layanan desa secara online.",
+                testi_title: "Apa Kata Klien Kami", contact_title: "Hubungi Kami", footer_copy: "Hak Cipta Dilindungi." 
+            },
+            en: { 
+                nav_home: "Home", nav_profile: "Profile", nav_services: "Services", nav_testi: "Testimonials", nav_contact: "Contact", nav_cta: "Get Started", 
+                hero_title_1: "Elevate Your", hero_title_2: "Business Presence", hero_desc: "We help brands grow online with smart strategies.", hero_btn_1: "View Services",
+                prof_title: "Company Profile", prof_t_1: "1. About Company", prof_d_1: "PT WEB DIGITAL MARKETING IS A COMPANY OPERATING IN DIGITAL TECHNOLOGY AND ONLINE MARKETING.",
+                prof_t_2: "2. Vision", prof_d_2: "To become the most trusted digital marketing company in Indonesia.",
+                prof_t_3: "3. Mission", prof_d_3: "Provide effective digital marketing, increase client sales, and develop modern web technologies.",
+                serv_title: "Our Main Services",
+                serv_1_t: "Social Media Management", serv_1_d: "Professional management for your business social media platforms to be more engaging.",
+                serv_2_t: "Cerita Kita Publisher", serv_2_d: "Professional book publishing services, both manual and digital, to document your work.",
+                serv_3_t: "Village Info Platform", serv_3_d: "Modern digital platform solutions for village information and online service systems.",
+                testi_title: "What Clients Say", contact_title: "Contact Us", footer_copy: "All Rights Reserved." 
+            },
+            jv: { 
+                nav_home: "Beranda", nav_profile: "Profil", nav_services: "Layanan", nav_testi: "Testimoni", nav_contact: "Kontak", nav_cta: "Miwiti", 
+                hero_title_1: "Tingkataken Kawontenan", hero_title_2: "Bisnis Panjenengan", hero_desc: "Kula mbantu merek ngrembaka online mawi strategi pinter.", hero_btn_1: "Priksani Layanan",
+                prof_title: "Profil Perusahaan", prof_t_1: "1. Babagan Perusahaan", prof_d_1: "PT WEB DIGITAL MARKETING INGIH PUNIKA PERUSAHAAN ING BIDANG TEKNOLOGI DIGITAL LAN PEMASARAN ONLINE.",
+                prof_t_2: "2. Visi", prof_d_2: "Dados perusahaan digital marketing ingkang dipun pitados lan paling ngajeng ing Indonesia.",
+                prof_t_3: "3. Misi", prof_d_3: "Nyedhiyakaken layanan digital marketing efektif, mbantu klien nambah dodolan, lan ngrembakakaken teknologi web modern.",
+                serv_title: "Layanan Utama Kula",
+                serv_1_t: "Jasa Pengelola Medsos", serv_1_d: "Layanan profesional kagem ngelola media sosial bisnis panjenengan supaya luwih narik.",
+                serv_2_t: "Cerita Kita Publisher", serv_2_d: "Layanan penerbitan buku profesional, manual utawi digital, kagem nyimpen karya panjenengan.",
+                serv_3_t: "Platform Informasi Desa", serv_3_d: "Solusi platform digital modern kagem informasi lan sistem layanan desa online.",
+                testi_title: "Pangandikan Klien", contact_title: "Hubungi Kula", footer_copy: "Hak Cipta Dipun Lindhungi." 
+            }
         };
 
         // Theme Toggle
