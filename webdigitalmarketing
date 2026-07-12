@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT WEBDIGITAL MARKETING | Jasa Digital Marketing & Web Development</title>
+    <meta name="description" content="PT WEBDIGITAL MARKETING membantu bisnis Anda tumbuh secara online dengan layanan digital marketing, pembuatan website, SEO, dan periklanan.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 antialiased transition-colors duration-300">
+
+    <header class="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100 dark:border-gray-800" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-2xl font-bold text-brand-700 dark:text-brand-500 tracking-tighter"><i class="fa-solid fa-chart-line mr-2"></i>WEBDIGITAL</a>
+                <nav class="hidden lg:flex space-x-6">
+                    <a href="#home" class="hover:text-brand-600" data-i18n="nav_home">Beranda</a>
+                    <a href="#about" class="hover:text-brand-600" data-i18n="nav_about">Tentang</a>
+                    <a href="#services" class="hover:text-brand-600" data-i18n="nav_services">Layanan</a>
+                    <a href="#testimonials" class="hover:text-brand-600" data-i18n="nav_testi">Testimoni</a>
+                    <a href="#contact" class="hover:text-brand-600" data-i18n="nav_contact">Kontak</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <select id="lang-select" class="bg-transparent text-sm focus:outline-none cursor-pointer">
+                        <option value="id">🇮🇩 ID</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="jv">ꦗꦮ JV</option>
+                    </select>
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                    <a href="#contact" class="hidden lg:block bg-brand-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-700" data-i18n="nav_cta">Mulai Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="home" class="py-20 text-center px-4">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6"><span data-i18n="hero_title_1">Tingkatkan Kehadiran</span> <span class="text-brand-600" data-i18n="hero_title_2">Bisnis Anda</span></h1>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10" data-i18n="hero_desc">Kami membantu merek tumbuh secara online dengan strategi cerdas, pembuatan website profesional, dan kampanye berdampak.</p>
+            <a href="#services" class="bg-brand-600 text-white px-8 py-4 rounded-full font-bold" data-i18n="hero_btn_1">Lihat Layanan Kami</a>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-16" data-i18n="testi_title">Apa Kata Klien Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 10 Testimonial Cards -->
+                    <script>
+                        const testimonials = [
+                            {name: "Budi Santoso", role: "UMKM Lokal", text: "Pengerjaan website sangat cepat dan sangat profesional!"},
+                            {name: "Siti Aminah", role: "Toko Online", text: "SEO-nya mantap, trafik naik drastis setelah dibantu Webdigital."},
+                            {name: "Andi Wijaya", role: "Startup Founder", text: "Layanan responsif dan sangat membantu untuk bisnis baru kami."},
+                            {name: "PT Maju Jaya", role: "Perusahaan", text: "Desain web modern dan elegan sesuai dengan visi perusahaan."},
+                            {name: "Restu Ibu Cafe", role: "Kuliner", text: "Marketing digital terukur dan hasilnya sangat nyata."},
+                            {name: "Dwi Haryanto", role: "Bisnis Jasa", text: "Harga kompetitif, kualitas jempolan. Sangat puas!"},
+                            {name: "Fashion Store", role: "Retail", text: "Sangat puas dengan manajemen konten media sosialnya."},
+                            {name: "Klinik Sehat", role: "Kesehatan", text: "Website sangat responsif dan mudah digunakan di HP."},
+                            {name: "Tech Solutions", role: "IT", text: "Komunikasi dengan tim sangat mudah dan solutif."},
+                            {name: "Event Organizer", role: "EO", text: "Rekomendasi terbaik untuk agensi digital di Yogyakarta."}
+                        ];
+                        document.write(testimonials.map(t => `
+                            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-2xl border border-gray-100 dark:border-gray-600">
+                                <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"${t.text}"</p>
+                                <h4 class="font-bold text-gray-900 dark:text-white">${t.name}</h4>
+                                <span class="text-sm text-brand-600">${t.role}</span>
+                            </div>
+                        `).join(''));
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="max-w-4xl mx-auto px-4 bg-white dark:bg-gray-800 p-10 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h2 class="text-3xl font-bold mb-8" data-i18n="contact_title">Hubungi Kami</h2>
+                <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                    <p><i class="fa-solid fa-location-dot mr-3 text-brand-600"></i> Jl. Kaliurang KM 10, Sleman, Yogyakarta</p>
+                    <p><i class="fa-brands fa-whatsapp mr-3 text-brand-600"></i> 08551236277</p>
+                    <p><i class="fa-solid fa-envelope mr-3 text-brand-600"></i> adminwebdigitalmarketing@gmail.com</p>
+                    <p><i class="fa-solid fa-link mr-3 text-brand-600"></i> <a href="https://ptwebdigitalmarketing.taplink.bio" class="text-brand-600 underline">ptwebdigitalmarketing.taplink.bio</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center bg-gray-900 text-white">
+        <p>&copy; 2026 PT Webdigital Marketing. <span data-i18n="footer_copy">Hak Cipta Dilindungi.</span></p>
+    </footer>
+
+    <script>
+        const translations = {
+            id: { nav_home: "Beranda", nav_about: "Tentang", nav_services: "Layanan", nav_testi: "Testimoni", nav_contact: "Kontak", nav_cta: "Mulai Sekarang", hero_title_1: "Tingkatkan Kehadiran", hero_title_2: "Bisnis Anda", hero_desc: "Kami membantu merek tumbuh secara online dengan strategi cerdas.", hero_btn_1: "Lihat Layanan Kami", testi_title: "Apa Kata Klien Kami", contact_title: "Hubungi Kami", footer_copy: "Hak Cipta Dilindungi." },
+            en: { nav_home: "Home", nav_about: "About", nav_services: "Services", nav_testi: "Testimonials", nav_contact: "Contact", nav_cta: "Get Started", hero_title_1: "Elevate Your", hero_title_2: "Business Presence", hero_desc: "We help brands grow online with smart strategies.", hero_btn_1: "View Services", testi_title: "What Clients Say", contact_title: "Contact Us", footer_copy: "All Rights Reserved." },
+            jv: { nav_home: "Beranda", nav_about: "Babagan", nav_services: "Layanan", nav_testi: "Testimoni", nav_contact: "Kontak", nav_cta: "Miwiti", hero_title_1: "Tingkataken Kawontenan", hero_title_2: "Bisnis Panjenengan", hero_desc: "Kula mbantu merek ngrembaka online mawi strategi pinter.", hero_btn_1: "Priksani Layanan", testi_title: "Pangandikan Klien", contact_title: "Hubungi Kula", footer_copy: "Hak Cipta Dipun Lindhungi." }
+        };
+
+        // Theme Toggle
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Language Switcher
+        document.getElementById('lang-select').addEventListener('change', (e) => {
+            const lang = e.target.value;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) el.innerText = translations[lang][key];
+            });
+        });
+    </script>
+</body>
+</html>
